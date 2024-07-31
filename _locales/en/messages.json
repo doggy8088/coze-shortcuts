@@ -1,0 +1,11 @@
+{
+    "cozeshortcuts_name": {
+        "message": "Coze Shortcuts"
+    },
+    "cozeshortcuts_description": {
+        "message": "Enhance the user experience of the Coze website by adding some useful keyboard shortcuts to facilitate quick navigation to different pages on the Coze website."
+    },
+    "cozeshortcuts_author": {
+        "message": "Will Huang"
+    }
+}
