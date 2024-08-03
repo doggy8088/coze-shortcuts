@@ -11,7 +11,8 @@
     document.addEventListener('keydown', function (event) {
 
         // 如果使用者停留在網址列或是輸入框中，就不要觸發快速鍵的功能
-        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA' || event.target.isContentEditable) {
+
             return;
         }
 
