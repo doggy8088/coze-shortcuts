@@ -39,28 +39,28 @@
         }
 
         // 檢查是否按下了 Alt 鍵和 S 鍵
-        if (!event.altKey && (event.key === 's' || event.key === 'S')) {
+        if (!event.ctrlKey && !event.altKey && (event.key === 's' || event.key === 'S')) {
             performActions('Message Credits');
         }
-        if (!event.altKey && (event.key === 'p' || event.key === 'P')) {
+        if (!event.ctrlKey && !event.altKey && (event.key === 'p' || event.key === 'P')) {
             performActions('Personal');
         }
-        if (!event.altKey && (event.key === 'h' || event.key === 'H')) {
+        if (!event.ctrlKey && !event.altKey && (event.key === 'h' || event.key === 'H')) {
             performActions('Home');
         }
-        if (!event.altKey && (event.key === 't' || event.key === 'T')) {
+        if (!event.ctrlKey && !event.altKey && (event.key === 't' || event.key === 'T')) {
             findAndToggleTeams();
         }
 
-        if (!event.altKey && (event.key === '1')) {
+        if (!event.ctrlKey && !event.altKey && (event.key === '1')) {
             performActions('Bot Store');
         }
 
-        if (!event.altKey && (event.key === '2')) {
+        if (!event.ctrlKey && !event.altKey && (event.key === '2')) {
             performActions('Plugin Store');
         }
 
-        if (!event.altKey && (event.key === '3')) {
+        if (!event.ctrlKey && !event.altKey && (event.key === '3')) {
             performActions('Workflow Store');
         }
 
@@ -77,7 +77,7 @@
             }
         }
 
-        if (!event.altKey && (event.key === 'c' || event.key === 'C')) {
+        if (!event.ctrlKey && !event.altKey && (event.key === 'c' || event.key === 'C')) {
             performActions('Create bot');
         }
     });

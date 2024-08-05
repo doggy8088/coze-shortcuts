@@ -1,9 +1,9 @@
 # Pubilsh Notes
 
-1. Simply zip whole folder as a zip file such as `cozeshortcuts_v0.4.0.zip`
+1. Simply zip whole folder as a zip file such as `cozeshortcuts_v0.4.1.zip`
 
     ```sh
-    7z a cozeshortcuts_v0.4.0.zip _locales images scripts CHANGELOG.md manifest.json README.md
+    7z a cozeshortcuts_v0.4.1.zip _locales images scripts CHANGELOG.md manifest.json README.md
     ```
 
 2. Publish to Chrome Web Store.

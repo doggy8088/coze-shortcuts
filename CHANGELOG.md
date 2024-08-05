@@ -1,5 +1,9 @@
 # Changelog
 
+- 0.4.1 (2024/08/06)
+
+  - Bug fixed: When press `ctrl+c` will trigger `c` (Create bot) shortcut key. This version fixed that.
+
 - 0.4.0 (2024/08/06)
 
   - Fixed for Coze layout change.

@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "__MSG_cozeshortcuts_name__",
     "description": "__MSG_cozeshortcuts_description__",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "default_locale": "zh_TW",
     "author": "__MSG_cozeshortcuts_author__",
     "icons": {
