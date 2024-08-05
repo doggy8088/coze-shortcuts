@@ -8,8 +8,12 @@ Currently provides the following shortcuts:
 
 - Press `h` to open the `Home` page
 - Press `p` to open the `Personal` page
-- Press `s` to open the `Manage Subscription` page
 - Press `t` to switch between different Teams projects, and press `Enter` to enter the page
+- Press `1` to open the `Bot Store` page
+- Press `2` to open the `Plugin Store` page
+- Press `3` to open the `Workflow Store` page
+- Press `c` to open the `+ Create bot` dialog. Hit `Escape` to close the dialog.
+- Press `s` to open the `Message Credits` dialog. Hit `Escape` to close the dialog.
 - Press `alt+p` to open the `My profile` page
 - Press `alt+1` to switch the tab above on the Space page: `Bots`
 - Press `alt+2` to switch the tab above on the Space page: `Plugins`

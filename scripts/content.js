@@ -40,7 +40,7 @@
 
         // 檢查是否按下了 Alt 鍵和 S 鍵
         if (!event.altKey && (event.key === 's' || event.key === 'S')) {
-            performActions_UserSubMenu('Manage Subscription');
+            performActions('Message Credits');
         }
         if (!event.altKey && (event.key === 'p' || event.key === 'P')) {
             performActions('Personal');
@@ -52,16 +52,33 @@
             findAndToggleTeams();
         }
 
+        if (!event.altKey && (event.key === '1')) {
+            performActions('Bot Store');
+        }
+
+        if (!event.altKey && (event.key === '2')) {
+            performActions('Plugin Store');
+        }
+
+        if (!event.altKey && (event.key === '3')) {
+            performActions('Workflow Store');
+        }
+
         if (event.altKey && (event.key === 'p' || event.key === 'P')) {
             console.log('Alt + P')
             performActions_UserSubMenu('My profile');
         }
+
         if (event.altKey && (parseInt(event.key) >= 1 && parseInt(event.key) <= 5)) {
             var elm = findTestId('bot.tab');
             if (elm) {
                 console.log('Alt + ' + event.key, [...elm.parentElement.children].filter(x => x.tagName === 'A'));
                 [...elm.parentElement.children].filter(x => x.tagName === 'A')?.[parseInt(event.key) - 1]?.click();
             }
+        }
+
+        if (!event.altKey && (event.key === 'c' || event.key === 'C')) {
+            performActions('Create bot');
         }
     });
 
@@ -104,19 +121,12 @@
         for (let i = 0; i < elements.snapshotLength; i++) {
             let element = elements.snapshotItem(i);
             if (element) {
-                // 向上遍歷DOM樹，查找帶有tabindex屬性的節點
-                while (element && !element.hasAttribute('tabindex')) {
-                    element = element.parentElement;
-                }
-
-                if (element) {
-                    element.click();
-                    console.log(`Clicked element containing "${text}"`);
-
-                    return true;
-                } else {
-                    console.log(`Found text "${text}", but no parent element with tabindex`);
-                }
+                element.click();
+                element?.parentElement?.parentElement?.scrollIntoView()
+                console.log(`Clicked element containing "${text}"`);
+                return true;
+            } else {
+                console.log(`Found text "${text}", but no parent element with tabindex`);
             }
         }
 
@@ -136,20 +146,13 @@
         for (let i = 0; i < elements.snapshotLength; i++) {
             let element = elements.snapshotItem(i);
             if (element) {
-                // 向上遍歷DOM樹，查找帶有tabindex屬性的節點
-                while (element && !element.hasAttribute('tabindex')) {
-                    element = element.parentElement;
-                }
+                console.log(element)
+                element?.parentElement?.parentElement?.nextSibling?.click();
+                console.log(`Clicked element containing "${text}" and get it's next sibling`);
 
-                if (element) {
-                    console.log(element)
-                    element?.parentElement?.parentElement?.nextSibling?.click();
-                    console.log(`Clicked element containing "${text}" and get it's next sibling`);
-
-                    return true;
-                } else {
-                    console.log(`Found text "${text}", but no parent element with tabindex`);
-                }
+                return true;
+            } else {
+                console.log(`Found text "${text}", but no parent element with tabindex`);
             }
         }
 
@@ -230,10 +233,10 @@
     }
 
     async function performActions_UserSubMenu(clickstr) {
-        findParentTabindexAndNexItemAndClickElement('Coze token');
+        findParentTabindexAndNexItemAndClickElement('Coze API');
         await new Promise(resolve => setTimeout(resolve, 100));
         findAndTriggerMouseDown(clickstr);
-        findParentTabindexAndNexItemAndClickElement('Coze token');
+        findParentTabindexAndNexItemAndClickElement('Coze API');
     }
 
 })();
